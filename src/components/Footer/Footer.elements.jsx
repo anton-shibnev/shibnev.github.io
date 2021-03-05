@@ -3,11 +3,6 @@ import { DARK } from '../../style/config/colors';
 import { Container } from '../Container';
 
 export const FooterContainer = styled(Container)``;
-
-// display: grid;
-// grid-auto-flow: column;
-// align-items: center;
-// justify-content: center;
 export const StyledFooter = styled.footer``;
 
 const StyledSocLink = styled.a`
