@@ -1,12 +1,11 @@
 import styled from 'styled-components/macro';
-import { DARK } from '../../style/config/colors';
 import { Container } from '../Container';
 
 export const FooterContainer = styled(Container)``;
 export const StyledFooter = styled.footer``;
 
 const StyledSocLink = styled.a`
-  color: ${DARK};
+  color: ${(props) => props.theme.DARK};
   font-size: 2rem;
 `;
 
