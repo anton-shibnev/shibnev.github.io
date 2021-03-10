@@ -2,14 +2,17 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 const StyledList = styled.ul`
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
-  grid-auto-flow: ${(props) => props.autoFlow || 'column'};
-  grid-gap: ${(props) => props.gap || '0'};
+  flex-wrap: wrap;
   padding: 0;
-  margin: 0;
+  margin: -${(props) => props.gap / 2}px;
   list-style: ${(props) => props.listStyle || 'none'};
+
+  > * {
+    margin: ${(props) => props.gap / 2}px;
+  }
 `;
 
 export const List = ({ priority = 'ul', list, gap, autoFlow, listStyle }) => {
