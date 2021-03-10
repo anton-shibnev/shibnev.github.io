@@ -2,8 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as theme from './style/config/theme';
-import { GlobalStyle } from './style/GlobalStyle'
+import { GlobalStyle } from './style/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
+
+// console.log(theme.TRANSITION);
 
 ReactDOM.render(
   <React.StrictMode>
