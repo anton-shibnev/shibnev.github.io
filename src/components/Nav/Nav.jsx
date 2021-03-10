@@ -1,5 +1,5 @@
 import { List } from '../List';
-import { NavItem } from './Nav.elements';
+import { NavItem, StyledNav } from './Nav.elements';
 
 export const Nav = () => {
   const arr = [
@@ -11,8 +11,8 @@ export const Nav = () => {
   const list = arr.map((item) => <NavItem to={item.to}>{item.label}</NavItem>);
 
   return (
-    <nav>
-      <List gap='20px' list={list} />
-    </nav>
+    <StyledNav>
+      <List gap='20' list={list} />
+    </StyledNav>
   );
 };
