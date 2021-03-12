@@ -5,8 +5,6 @@ import * as theme from './style/config/theme';
 import { GlobalStyle } from './style/GlobalStyle';
 import { ThemeProvider } from 'styled-components';
 
-// console.log(theme.TRANSITION);
-
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
