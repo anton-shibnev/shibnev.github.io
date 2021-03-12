@@ -1,8 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
+import { ubuntu } from '../static/fonts/ubuntu/ubuntu.css'
+
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize};
+  ${ubuntu};
 
   * {
     box-sizing: border-box;
