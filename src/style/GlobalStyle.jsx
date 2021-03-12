@@ -28,4 +28,8 @@ export const GlobalStyle = createGlobalStyle`
     grid-template-rows: auto 1fr auto;
     background-color: ${(props) => props.theme.BG_COLOR};
   }
+
+  h1, h2, h3 , h4 ,h5 ,h6, p {
+    margin: 0;
+  }
 `;
