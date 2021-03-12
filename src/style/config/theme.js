@@ -11,7 +11,7 @@ export const GREY = `#F6F6FA`;
 export const BG_COLOR = WHITE;
 
 // typography
-export const FONT_FAMILY = `'Heebo', sans-serif`;
+export const FONT_FAMILY = `'Ubuntu', sans-serif`;
 export const FONT_SIZE = '18px';
 export const FONT_WEIGHT = '400';
 export const LINE_HEIGHT = '1.2';
