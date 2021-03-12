@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
 import { Container } from '../Container';
+import { hoverFocus } from '../../style/modal/hoverFocus';
+import { transition } from '../../style/modal/transition';
 
 export const StyledHeader = styled.header`
   position: sticky;
-  height: 100px;
 `;
 
 export const HeaderContainer = styled(Container)`
@@ -19,7 +20,11 @@ export const HeaderLogo = styled(NavLink)`
   height: 3rem;
   margin-right: auto;
   flex-shrink: 0;
-  transition: ${(props) => props.theme.TRANSITION};
+  ${transition('background-color')};
+
+  ${hoverFocus`
+    background-color: ${(props) => props.theme.PRIMARY};
+  `}
 
   &.active {
     background-color: ${(props) => props.theme.PRIMARY};
