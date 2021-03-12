@@ -4,8 +4,9 @@ export const WHITE = `#FFF`;
 
 // theme colors
 export const DARK = `#21243D`;
-export const PRIMARY = `#9E7682`;
-export const SECONDARY = `#4D4861`;
+export const PRIMARY = `#FF6464`;
+export const SECONDARY = `#00A8CC`;
+export const LIGHT = `#EDF7FA`;
 export const GREY = `#F6F6FA`;
 export const BG_COLOR = WHITE;
 
