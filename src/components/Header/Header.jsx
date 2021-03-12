@@ -1,4 +1,4 @@
-// import { Burger } from '../Burger';
+import { Burger } from '../Burger';
 import { Nav } from '../Nav/Nav';
 import { StyledHeader, HeaderContainer, HeaderLogo } from './Header.elements';
 
@@ -8,7 +8,7 @@ export const Header = () => {
       <HeaderContainer>
         <HeaderLogo to='/' exact={true} />
         <Nav />
-        {/* <Burger /> */}
+        <Burger />
       </HeaderContainer>
     </StyledHeader>
   );
