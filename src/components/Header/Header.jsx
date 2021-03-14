@@ -1,15 +1,22 @@
-import { Burger } from '../Burger';
-import { Nav } from '../Nav/Nav';
-import { StyledHeader, HeaderContainer, HeaderLogo } from './Header.elements';
+import React, { useState } from 'react';
+import {
+  HeaderNav,
+  HeaderMobNav,
+  StyledHeader,
+  HeaderBurger,
+} from './Header.elements';
 
 export const Header = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
   return (
-    <StyledHeader>
-      <HeaderContainer>
-        <HeaderLogo to='/' exact={true} />
-        <Nav />
-        <Burger />
-      </HeaderContainer>
-    </StyledHeader>
+    <>
+      <StyledHeader forwardedAs='header' id='header'>
+        <HeaderNav />
+        <HeaderBurger onClick={handleClick} />
+      </StyledHeader>
+      <HeaderMobNav direction='column' onClick={handleClick} click={click} />
+    </>
   );
 };

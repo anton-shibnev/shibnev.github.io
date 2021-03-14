@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
-import { ubuntu } from '../static/fonts/ubuntu/ubuntu.css'
-
+import { ubuntu } from '../static/fonts/ubuntu/ubuntu.css';
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize};
@@ -25,11 +24,12 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #root {
-    ${'' /* min-height: 100vh; */}
+    min-height: 100vh;
     display: grid;
     align-content: start;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr auto; 
     background-color: ${(props) => props.theme.BG_COLOR};
+    user-select: none;
   }
 
   h1, h2, h3 , h4 ,h5 ,h6, p {

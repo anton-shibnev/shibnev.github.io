@@ -1,6 +1,6 @@
 import styled from 'styled-components/macro';
-import marginX from '../style/modal/margin';
-import { paddingX } from '../style/modal/padding';
+import { marginX } from '../style/modal/margin';
+import { paddingX } from '../style/modal';
 import { CONTAINER_PADDINGS, CONTAINER_MAX_WIDTH } from '../style/config/theme';
 
 const containerMaxWidth =

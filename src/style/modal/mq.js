@@ -1,5 +1,5 @@
 import { BREAKPOINTS } from '../config/theme';
-import { rem } from './rem';
+import { rem } from './';
 
 export const mq = (styleKey, thing, toRem = true) => {
   let str = ``;
@@ -7,6 +7,11 @@ export const mq = (styleKey, thing, toRem = true) => {
   const init = (styleKey, styleValue) => {
     return `${styleKey}: ${toRem ? rem(styleValue) : styleValue};`;
   };
+
+  // if (typeof styleKey === 'function') {
+    // console.log('func', styleKey);
+    // styleKey(thing)
+  // }
 
   if (typeof thing === 'object') {
     for (const key in thing) {

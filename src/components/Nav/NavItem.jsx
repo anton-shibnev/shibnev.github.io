@@ -1,14 +1,16 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components/macro';
-import { hoverFocus } from '../../style/modal/hoverFocus';
-import { transition } from '../../style/modal/transition';
-
-export const StyledNav = styled.nav``;
+import { transition, font, hoverFocus } from '../../style/modal';
 
 export const NavItem = styled(NavLink)`
   color: ${(props) => props.theme.DARK};
   text-decoration: none;
   ${transition('color')};
+  ${font({
+    'font-family': '20px',
+    'line-height': '29px',
+    'font-weight': '500',
+  })};
 
   ${hoverFocus`
     color: ${(props) => props.theme.PRIMARY};

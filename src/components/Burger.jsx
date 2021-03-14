@@ -1,28 +1,29 @@
-import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { BtnReset } from '../style/helpers/btnReset';
-import { mq } from '../style/modal/mq';
-import { rem } from '../style/modal/rem';
+import { BtnReset } from '../style/helpers';
+import { rem, hoverFocus, transition } from '../style/modal';
 
 const StyledBurger = styled(BtnReset)`
-  ${mq('display', { mob: 'grid', xs: 'none' })};
+  display: grid;
   grid-gap: 9px;
   width: 30px;
+  color: ${(props) => props.theme.DARK};
+  ${transition('color')};
+
+  ${hoverFocus`
+      color: ${(props) => props.theme.PRIMARY};
+  `}
 `;
 
 const BurgerLine = styled.span`
   height: ${rem('2px')};
   width: 100%;
-  background-color: ${(props) => props.theme.DARK};
+  background-color: currentColor;
   display: block;
 `;
 
-export const Burger = () => {
-  const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
-
+export const Burger = ({ className, onClick }) => {
   return (
-    <StyledBurger onClick={handleClick} className={click ? 'active' : ''}>
+    <StyledBurger className={className} onClick={onClick}>
       {[...Array(3)].map((_, index) => (
         <BurgerLine key={index} />
       ))}

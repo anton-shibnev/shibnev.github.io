@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BtnReset } from '../style/helpers/btnReset';
+import { BtnReset } from '../style/helpers';
 import { font } from '../style/modal/font';
 import { mq } from '../style/modal/mq';
 import { rem } from '../style/modal/rem';
@@ -19,12 +19,18 @@ const StyledBtn = styled(BtnReset)`
 
   ${transition('background-color', 'color')};
   background-color: ${(props) => props.theme.PRIMARY};
+  display: inline-flex;
+  text-decoration: none;
 
   ${hoverFocus`
-      background-color: ${(props) => props.theme.SECONDARY};
+      background-color: ${(props) => props.theme.DARK};
   `};
 `;
 
-export const Btn = ({ children, as = 'button' }) => {
-  return <StyledBtn as={as}>{children}</StyledBtn>;
+export const Btn = ({ children, as = 'button', className, href }) => {
+  return (
+    <StyledBtn as={as} className={className} href={href}>
+      {children}
+    </StyledBtn>
+  );
 };

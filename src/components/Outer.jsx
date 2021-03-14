@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container } from './Container';
+import { Container } from './';
 
-const StyledSection = styled.section``;
+const StyledOuter = styled.section``;
 
-export const Outer = ({ children, id, as = 'section' }) => {
+export const Outer = ({ children, id, as = 'section', className }) => {
   return (
-    <StyledSection id={id} as={as}>
+    <StyledOuter id={id} as={as} className={className}>
       <Container>{children}</Container>
-    </StyledSection>
+    </StyledOuter>
   );
 };

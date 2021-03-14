@@ -1,19 +1,32 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Desc, Title } from '../../style/helpers/typography';
-import { Btn } from '../Btn';
-import { Outer } from '../Outer';
+import {
+  HeroBtn,
+  HeroDesc,
+  HeroTitle,
+  StyledHero,
+  HeroAvatar,
+} from './Hero.elements';
 
-const StyledHero = styled(Outer)`
-  min-height: 100vh;
-`;
+const DATA = {
+  title: 'Hi, I am Anton Shibnev, Frontend Devoloper',
+  desc:
+    'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+  btn: {
+    label: 'Download Resume',
+    href:
+      'https://spb.hh.ru/resume_converter/%D0%A8%D0%B8%D0%B1%D0%BD%D0%B5%D0%B2%20%D0%90%D0%BD%D1%82%D0%BE%D0%BD%20%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=063ef629ff034ef45b0039ed1f344433305458&type=pdf&hhtmSource=resume_view&hhtmFrom=user_resumes_list',
+  },
+};
 
 export const Hero = () => {
   return (
-    <StyledHero id={'hero'}>
-      <Title>Hi, I am Anton</Title>
-      <Desc>Hi, I am Anton</Desc>
-      <Btn>Download Resume</Btn>
+    <StyledHero id='hero'>
+      <HeroTitle>{DATA.title}</HeroTitle>
+      <HeroDesc>{DATA.desc}</HeroDesc>
+      <HeroBtn href={DATA.btn.href} forwardedAs='a'>
+        {DATA.btn.label}
+      </HeroBtn>
+      <HeroAvatar />
     </StyledHero>
   );
 };

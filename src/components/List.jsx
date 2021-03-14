@@ -1,29 +1,41 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
+// TODO flex-grid func
 const StyledList = styled.ul`
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-wrap: wrap;
+  margin: -${(props) => props.gap / 2}px 0 0 -${(props) => props.gap / 2}px;
+  flex-direction: ${(props) => props.direction};
   padding: 0;
-  margin: -${(props) => props.gap / 2}px;
   list-style: ${(props) => props.listStyle || 'none'};
+  overflow: hidden;
 
   > * {
-    margin: ${(props) => props.gap / 2}px;
+    margin: ${(props) => props.gap / 2}px 0 0 ${(props) => props.gap / 2}px;
   }
 `;
 
-export const List = ({ priority = 'ul', list, gap, autoFlow, listStyle }) => {
+export const List = ({
+  as = 'ul',
+  list = [],
+  gap,
+  autoFlow,
+  listStyle,
+  className,
+  direction = 'row',
+}) => {
   const listItems = list.map((item, index) => <li key={index}>{item}</li>);
 
   return (
     <StyledList
+      className={className}
       gap={gap}
-      as={priority}
+      as={as}
       listStyle={listStyle}
       autoFlow={autoFlow}
+      direction={direction}
     >
       {listItems}
     </StyledList>

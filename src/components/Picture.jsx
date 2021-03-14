@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { DARK } from '../style/config/theme';
+import { rgba } from '../style/modal';
 
 const StyledPicture = styled.picture`
   display: block;
+  background-color: ${rgba(DARK, 0.1)};
 
   img {
     width: 100%;
@@ -14,9 +17,10 @@ const StyledPicture = styled.picture`
 export const Picture = ({
   path,
   fileName,
-  source,
+  source = [],
   fileType = 'jpg',
   alt = '',
+  className,
 }) => {
   const sourceList = source.map((bp, index) => (
     <source
@@ -28,7 +32,7 @@ export const Picture = ({
   ));
 
   return (
-    <StyledPicture>
+    <StyledPicture className={className}>
       {sourceList}
       <img src={`${path}/${fileName}.${fileType}`} alt={alt} />
     </StyledPicture>

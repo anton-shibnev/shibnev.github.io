@@ -1,31 +1,45 @@
 import React from 'react';
-import { StyledFooter, SocLink } from './Footer.elements';
-import { FaFacebookSquare, FaLinkedin } from 'react-icons/fa';
+import { FaFacebookSquare, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { SiCodewars } from 'react-icons/si';
-import { List } from '../List';
-import { HhIcon } from '../icons/HhIcon';
+import { HhIcon } from '../icons';
+import { StyledFooter, FooterSocLink, FooterList } from './styles';
+
+const FOOTER_DATA = {
+  arr: [
+    {
+      href: 'https://www.facebook.com/anton.shibnev.10',
+      icon: FaFacebookSquare,
+    },
+    { href: 'https://www.codewars.com/users/shibnev', icon: SiCodewars },
+    {
+      href: 'https://www.linkedin.com/in/антон-шибнев-634130140',
+      icon: FaLinkedin,
+    },
+    {
+      href: 'https://spb.hh.ru/resume/063ef629ff034ef45b0039ed1f344433305458',
+      icon: HhIcon,
+    },
+    {
+      href: 'https://github.com/shibnev',
+      icon: FaGithub,
+    },
+  ],
+};
 
 export const Footer = () => {
-  const arr = [
-    { href: '#', icon: FaFacebookSquare },
-    { href: '#', icon: SiCodewars },
-    { href: '#', icon: FaLinkedin },
-    { href: '#', icon: HhIcon },
-  ];
-
-  const list = arr.map((item) => {
+  const list = FOOTER_DATA.arr.map((item) => {
     const Item = item.icon;
 
     return (
-      <SocLink href={item.href}>
+      <FooterSocLink href={item.href} target='__blank'>
         <Item />
-      </SocLink>
+      </FooterSocLink>
     );
   });
 
   return (
     <StyledFooter forwardedAs='footer' id='footer'>
-      <List gap='30' list={list}></List>
+      <FooterList gap='30' list={list} />
     </StyledFooter>
   );
 };

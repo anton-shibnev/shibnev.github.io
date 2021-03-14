@@ -1,4 +1,4 @@
-import { mq } from './mq';
+import { mq } from './';
 
 export const font = (props) => {
   let str = ``;

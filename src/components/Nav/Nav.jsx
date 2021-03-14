@@ -1,18 +1,22 @@
-import { List } from '../List';
-import { NavItem, StyledNav } from './Nav.elements';
+import { List } from '../';
+import { NavItem } from './NavItem';
 
-export const Nav = () => {
+export const Nav = ({ className, onClick, direction }) => {
   const arr = [
+    { to: '/', label: 'home' },
     { to: '/works', label: 'works' },
-    { to: '/blog', label: 'blog' },
     { to: '/contacts', label: 'contacts' },
   ];
 
-  const list = arr.map((item) => <NavItem to={item.to}>{item.label}</NavItem>);
+  const list = arr.map((item) => (
+    <NavItem exact to={item.to}>
+      {item.label}
+    </NavItem>
+  ));
 
   return (
-    <StyledNav>
-      <List gap='20' list={list} />
-    </StyledNav>
+    <nav className={className} onClick={onClick}>
+      <List gap='20' list={list} direction={direction} />
+    </nav>
   );
 };
