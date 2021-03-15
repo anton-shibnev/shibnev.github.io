@@ -6,12 +6,11 @@ const StyledBurger = styled(BtnReset)`
   display: grid;
   grid-gap: 9px;
   width: 30px;
-  color: ${(props) => props.theme.DARK};
   ${transition('color')};
-
+  color: ${(props) => (props.click ? props.theme.PRIMARY : props.theme.DARK)};
   ${hoverFocus`
-      color: ${(props) => props.theme.PRIMARY};
-  `}
+     color: ${(props) => props.theme.PRIMARY};
+ `};
 `;
 
 const BurgerLine = styled.span`
@@ -21,9 +20,9 @@ const BurgerLine = styled.span`
   display: block;
 `;
 
-export const Burger = ({ className, onClick }) => {
+export const Burger = ({ className, onClick, click }) => {
   return (
-    <StyledBurger className={className} onClick={onClick}>
+    <StyledBurger className={className} onClick={onClick} click={click}>
       {[...Array(3)].map((_, index) => (
         <BurgerLine key={index} />
       ))}

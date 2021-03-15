@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <StyledHeader forwardedAs='header' id='header'>
       <HeaderNav />
-      <HeaderBurger onClick={handleClick} click={click}/>
+      <HeaderBurger onClick={handleClick} click={click} />
       <HeaderMobNav direction='column' onClick={handleClick} click={click} />
     </StyledHeader>
   );

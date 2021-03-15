@@ -1,3 +1,1 @@
-import { HhIcon } from './HhIcon';
-
-export { HhIcon };
+export { HhIcon } from './HhIcon';
