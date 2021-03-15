@@ -1,5 +1,3 @@
-import { Home } from './Home/Home';
-import { Works } from './Works/Works';
-import { Contacts } from './Contacts/Contacts';
-
-export { Home, Works, Contacts };
+export { Home } from './Home/Home';
+export { Works } from './Works/Works';
+export { Contacts } from './Contacts/Contacts';

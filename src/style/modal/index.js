@@ -1,42 +1,25 @@
 import { mq } from './mq';
-import { circle } from './circle';
-import { font } from './font';
-import { hoverFocus } from './hoverFocus';
-// import {
-// margin,
-// marginX,
-// marginTop,
-// marginBottom,
-// marginLeft,
-// marginRight,
-// } from './margin';
-import { padding, paddingY, paddingX } from './padding';
-import { rem } from './rem';
-import { rgba } from './rgba';
-import { transition } from './transition';
-import { wh, maxWidth } from './wh';
 
+export { mq } from './mq';
+export { circle } from './circle';
+export { font } from './font';
+export { hoverFocus } from './hoverFocus';
+export {
+  margin,
+  marginX,
+  marginTop,
+  marginBottom,
+  marginLeft,
+  marginRight,
+} from './margin';
+export { padding, paddingY, paddingX } from './padding';
+export { rem } from './rem';
+export { rgba } from './rgba';
+export { transition } from './transition';
+export { wh, maxWidth } from './wh';
+
+
+// common
 export const display = (thing) => mq('display', thing);
 export const gridTemplateAreas = (thing) => mq('grid-template-areas', thing);
 export const justifyContent = (thing) => mq('justify-content', thing);
-
-export {
-  circle,
-  font,
-  hoverFocus,
-  mq,
-  padding,
-  paddingY,
-  paddingX,
-  rem,
-  rgba,
-  transition,
-  wh,
-  maxWidth,
-  // margin,
-  // marginX,
-  // marginTop,
-  // marginBottom,
-  // marginLeft,
-  // marginRight,
-};

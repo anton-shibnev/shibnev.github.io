@@ -1,25 +1,11 @@
-import { List } from './List';
-import { Outer } from './Outer';
-import { Picture } from './Picture';
-import { Container } from './Container';
-import { Burger } from './Burger';
-import { Btn } from './Btn';
-import { Avatar } from './Avatar';
-import { Nav } from './Nav/Nav';
-import { Hero } from './Hero/Hero';
-import { Header } from './Header/Header';
-import { Footer } from './Footer/Footer';
-
-export {
-  List,
-  Outer,
-  Picture,
-  Container,
-  Burger,
-  Btn,
-  Avatar,
-  Nav,
-  Hero,
-  Header,
-  Footer,
-};
+export { List } from './List';
+export { Outer } from './Outer';
+export { Picture } from './Picture';
+export { Container } from './Container';
+export { Burger } from './Burger';
+export { Btn } from './Btn';
+export { Avatar } from './Avatar';
+export { Nav } from './Nav/Nav';
+export { Hero } from './Hero/Hero';
+export { Header } from './Header/Header';
+export { Footer } from './Footer/Footer';

@@ -1,3 +1,1 @@
-import { BtnReset } from './BtnReset';
-
-export { BtnReset };
+export { BtnReset } from './BtnReset';
