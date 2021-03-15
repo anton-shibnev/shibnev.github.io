@@ -7,7 +7,7 @@ export const NavItem = styled(NavLink)`
   text-decoration: none;
   ${transition('color')};
   ${font({
-    'font-family': '20px',
+    'font-size': '20px',
     'line-height': '29px',
     'font-weight': '500',
   })};

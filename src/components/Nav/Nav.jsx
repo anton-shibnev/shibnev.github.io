@@ -9,13 +9,13 @@ export const Nav = ({ className, onClick, direction }) => {
   ];
 
   const list = arr.map((item) => (
-    <NavItem exact to={item.to}>
+    <NavItem exact to={item.to} onClick={onClick}>
       {item.label}
     </NavItem>
   ));
 
   return (
-    <nav className={className} onClick={onClick}>
+    <nav className={className}>
       <List gap='20' list={list} direction={direction} />
     </nav>
   );
