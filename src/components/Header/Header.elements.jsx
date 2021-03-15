@@ -26,7 +26,7 @@ export const HeaderMobNav = styled(Nav)`
   z-index: ${(props) => props.theme.Z_INDEX.fixed};
   background-color: ${(props) => props.theme.LIGHT};
   ${transition('transform')};
-  transform: translate(${(props) => (props.click ? '100%' : '0')});
+  transform: translate(${(props) => (props.click ? '0' : '100%')});
   ${padding('20px')};
   box-shadow: 0px 4px 10px rgba(187, 225, 250, 0.25);
 `;
