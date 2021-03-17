@@ -1,11 +1,11 @@
 import styled from 'styled-components/macro';
 import { BtnReset } from '../style/helpers';
-import { rem, hoverFocus, transition } from '../style/modal';
+import { rem, hoverFocus, transition, gridGap } from '../style/modal';
 
 const StyledBurger = styled(BtnReset)`
   display: grid;
-  grid-gap: 9px;
-  width: 30px;
+  ${gridGap('5px')};
+  width: ${rem('35px')};
   ${transition('color')};
   color: ${(props) => (props.click ? props.theme.PRIMARY : props.theme.DARK)};
   ${hoverFocus`
@@ -14,7 +14,8 @@ const StyledBurger = styled(BtnReset)`
 `;
 
 const BurgerLine = styled.span`
-  height: ${rem('2px')};
+  height: ${rem('5px')};
+  border-radius: 999px;
   width: 100%;
   background-color: currentColor;
   display: block;

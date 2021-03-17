@@ -10,20 +10,24 @@ import { transition } from '../style/modal/transition';
 const StyledBtn = styled(BtnReset)`
   color: ${(props) => props.theme.WHITE};
   ${font({
-    'font-size': { mob: '20px' },
-    'line-height': '29px',
-    'font-weight': '500',
+    'font-size': { mob: '24px' },
+    'line-height': '36px',
+    'font-weight': 'bold',
+    'letter-spacing': '0.25px',
   })};
-  border-radius: ${rem('2px')};
-  ${mq('padding', { mob: '10px 5px', xs: '9px 20px' })};
-
-  ${transition('background-color', 'color')};
+  border-radius: ${rem('16px')};
+  ${mq('padding', { mob: '10px 5px', xs: '12px 40px' })};
+  text-shadow: 0 2px 4px rgba(38, 50, 56, 0.16),
+    0 4px 8px rgba(38, 50, 56, 0.08);
+  box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1),
+    0px 16px 32px rgba(38, 50, 56, 0.08);
+  ${transition('background-color', 'color', 'box-shadow')};
   background-color: ${(props) => props.theme.PRIMARY};
   display: inline-flex;
   text-decoration: none;
 
   ${hoverFocus`
-      background-color: ${(props) => props.theme.DARK};
+    background-color: ${(props) => props.theme.DARK};
   `};
 `;
 

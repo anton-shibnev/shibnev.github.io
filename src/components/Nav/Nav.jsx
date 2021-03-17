@@ -1,22 +1,22 @@
-import { List } from '../';
+import styled from 'styled-components';
 import { NavItem } from './NavItem';
+import { NavList } from './NavList';
 
-export const Nav = ({ className, onClick, direction }) => {
-  const arr = [
-    { to: '/', label: 'home' },
-    { to: '/works', label: 'works' },
-    { to: '/contacts', label: 'contacts' },
-  ];
+const SNav = styled.nav`
+  position: relative;
+`;
 
-  const list = arr.map((item) => (
+export const Nav = ({ className, onClick, autoFlow, list }) => {
+  const mapList = list.map((item) => (
     <NavItem exact to={item.to} onClick={onClick}>
       {item.label}
     </NavItem>
   ));
 
   return (
-    <nav className={className}>
-      <List gap='20' list={list} direction={direction} />
-    </nav>
+    <SNav className={className}>
+      <NavList list={mapList} autoFlow={autoFlow} />
+      {/* <NavAnchor anchorWidth={anchorWidth} positionX={anchorPositionX} /> */}
+    </SNav>
   );
 };

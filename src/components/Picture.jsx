@@ -5,17 +5,20 @@ import { rgba } from '../style/modal';
 
 const StyledPicture = styled.picture`
   display: block;
-  background-color: ${rgba(DARK, 0.1)};
+  position: relative;
 
   img {
+    background-color: ${rgba(DARK, 0.1)};
     width: 100%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 5;
   }
 `;
 
 export const Picture = ({
-  path,
+  path = '',
   fileName,
   source = [],
   fileType = 'jpg',
@@ -31,10 +34,13 @@ export const Picture = ({
     />
   ));
 
+  const picPath = require(`../static/images/${path}${fileName}.${fileType}`)
+    .default;
+
   return (
     <StyledPicture className={className}>
       {sourceList}
-      <img src={`${path}/${fileName}.${fileType}`} alt={alt} />
+      <img src={picPath} alt={alt} />
     </StyledPicture>
   );
 };

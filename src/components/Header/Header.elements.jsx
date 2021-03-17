@@ -1,10 +1,13 @@
 import styled from 'styled-components/macro';
 import { display, padding, paddingY, transition } from '../../style/modal/';
 import { Burger, Nav, Outer, Container } from '../';
+import { SIZE } from '../../style/config/theme';
+import { List } from '../List';
 
 export const StyledHeader = styled(Outer)`
   position: sticky;
-  ${paddingY('10px')};
+  ${paddingY(SIZE.xs)};
+  z-index: ${({ theme }) => theme.Z_INDEX.sticky};
 
   ${Container} {
     display: flex;
@@ -13,9 +16,13 @@ export const StyledHeader = styled(Outer)`
 `;
 
 export const HeaderNav = styled(Nav)`
-  margin-left: auto;
   ${display({ mob: 'none', xs: 'block' })}
+  margin-left: auto;
   color: white;
+
+  ${List} {
+    grid-auto-flow: column;
+  }
 `;
 
 export const HeaderMobNav = styled(Nav)`
@@ -28,13 +35,14 @@ export const HeaderMobNav = styled(Nav)`
   z-index: ${(props) => props.theme.Z_INDEX.fixed};
   background-color: ${(props) => props.theme.LIGHT};
   ${transition('transform')};
-  transform: translate(${(props) => (props.click ? '0' : '100%')});
+  transform: translate(${(props) => (props.click ? '0' : '110%')});
   ${padding('20px')};
   box-shadow: 0 4px 10px rgba(187, 225, 250, 0.25);
-  display: flex;
-  flex-direction: column;
+
+  ${display({ mob: 'flex', xs: 'none' })};
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 
 export const HeaderBurger = styled(Burger)`

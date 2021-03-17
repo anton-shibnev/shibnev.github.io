@@ -17,9 +17,10 @@ export { rem } from './rem';
 export { rgba } from './rgba';
 export { transition } from './transition';
 export { wh, maxWidth } from './wh';
-
+export { absCenter } from './absCenter';
 
 // common
 export const display = (thing) => mq('display', thing);
 export const gridTemplateAreas = (thing) => mq('grid-template-areas', thing);
 export const justifyContent = (thing) => mq('justify-content', thing);
+export const gridGap = (thing) => mq('grid-gap', thing);

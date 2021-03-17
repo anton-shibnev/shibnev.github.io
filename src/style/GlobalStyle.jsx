@@ -1,10 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
-import { ubuntu } from '../static/fonts/ubuntu/ubuntu.css';
+import { inter } from '../static/fonts/inter/inter.css';
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize};
-  ${ubuntu};
+  ${inter};
 
   * {
     box-sizing: border-box;
@@ -30,6 +30,7 @@ export const GlobalStyle = createGlobalStyle`
     grid-template-rows: auto 1fr auto; 
     background-color: ${(props) => props.theme.BG_COLOR};
     user-select: none;
+    overflow-x: hidden;
   }
 
   h1, h2, h3 , h4 ,h5 ,h6, p {

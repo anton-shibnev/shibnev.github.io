@@ -5,7 +5,7 @@ export const rem = (thing) => {
     return `${(parseInt(str) / parseInt(FONT_SIZE)).toFixed(6)}rem`;
   };
 
-  return thing
+  return String(thing)
     .split(' ')
     .map((item) => {
       if (item.indexOf('px') >= 1) {

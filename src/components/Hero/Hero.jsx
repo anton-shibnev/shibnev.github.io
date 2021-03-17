@@ -18,7 +18,13 @@ export const Hero = () => {
       <HeroBtn href={DATA.btn.href} forwardedAs='a'>
         {DATA.btn.label}
       </HeroBtn>
-      <HeroAvatar />
+      <HeroAvatar
+        path={DATA.avatar.path}
+        fileName={DATA.avatar.fileName}
+        source={DATA.avatar.source}
+        fileType={DATA.avatar.fileType}
+        alt={DATA.avatar.alt}
+      />
     </StyledHero>
   );
 };

@@ -1,11 +1,16 @@
 import styled from 'styled-components/macro';
-import { hoverFocus, rem, transition } from '../../../style/modal/';
+import { font, hoverFocus } from '../../../style/modal/';
 
 export const FooterSocLink = styled.a`
-  color: ${(props) => props.theme.DARK};
-  font-size: ${rem('40px')};
-  ${transition('color')};
-  ${hoverFocus`
-    color: ${(props) => props.theme.PRIMARY};
-  `};
+  color: ${({ theme }) => theme.PRIMARY};
+  ${font({ 'font-size': '30px', 'line-height': '1' })};
+  position: relative;
+  z-index: ${({ theme }) => theme.Z_INDEX.normal};
+  display: flex;
+
+  svg {
+    pointer-events: none;
+  }
+
+  ${hoverFocus``};
 `;

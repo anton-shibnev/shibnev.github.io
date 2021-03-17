@@ -4,9 +4,27 @@ import { circle } from '../style/modal';
 import { Picture } from './';
 
 const StyledAvatar = styled(Picture)`
-  ${circle('250px')};
+  img {
+    ${circle('250px')};
+  }
 `;
 
-export const Avatar = ({ className }) => {
-  return <StyledAvatar className={className} />;
+export const Avatar = ({
+  path,
+  fileName,
+  source = [],
+  fileType = 'jpg',
+  alt = '',
+  className,
+}) => {
+  return (
+    <StyledAvatar
+      path={path}
+      fileName={fileName}
+      source={source}
+      fileType={fileType}
+      alt={alt}
+      className={className}
+    />
+  );
 };

@@ -1,22 +1,54 @@
 import { NavLink } from 'react-router-dom';
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
 import { transition, font, hoverFocus } from '../../style/modal';
 
 export const NavItem = styled(NavLink)`
-  color: ${(props) => props.theme.DARK};
+  color: ${({ theme }) => theme.DARK};
   text-decoration: none;
+  text-shadow: 0.06em 0.06em 0 ${({ theme }) => theme.WHITE};
   ${transition('color')};
   ${font({
-    'font-size': '20px',
-    'line-height': '29px',
-    'font-weight': '500',
+    'font-size': '30px',
+    'line-height': '1',
+    'font-weight': '900',
   })};
 
   ${hoverFocus`
-    color: ${(props) => props.theme.PRIMARY};
+    color: ${({ theme }) => theme.DANGER};
   `}
 
   &.active {
-    color: ${(props) => props.theme.PRIMARY};
+    color: ${({ theme }) => theme.DANGER};
+    position: relative;
+
+    &::after {
+      content: '';
+
+      display: block;
+      position: absolute;
+      top: 60%;
+      background-color: ${({ theme }) => theme.SECONDARY};
+      height: 0.5em;
+      border-radius: 999px;
+      z-index: -1;
+      width: calc(100% + 20px);
+      left: 50%;
+      ${transition('width', 'left')};
+      transform: translateX(-50%);
+    }
   }
+`;
+
+export const NavAnchor = styled.span`
+  display: block;
+  position: absolute;
+  top: ${({ positionY }) => positionY || '60%'};
+  background-color: ${({ theme }) => theme.SECONDARY};
+  height: 0.7em;
+  border-radius: 999px;
+  z-index: -1;
+  width: ${({ anchorWidth }) => anchorWidth};
+  left: ${({ positionX }) => positionX};
+  transform: scaleX(1.1);
+  ${transition('width', 'left')};
 `;
