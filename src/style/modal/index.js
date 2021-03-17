@@ -23,4 +23,8 @@ export { absCenter } from './absCenter';
 export const display = (thing) => mq('display', thing);
 export const gridTemplateAreas = (thing) => mq('grid-template-areas', thing);
 export const justifyContent = (thing) => mq('justify-content', thing);
+export const justifyItems = (thing) => mq('justify-items', thing);
 export const gridGap = (thing) => mq('grid-gap', thing);
+export const justifySelf = (thing) => mq('justify-self', thing);
+
+export const textAlign = (thing) => mq('text-align', thing);

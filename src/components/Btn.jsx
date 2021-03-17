@@ -10,13 +10,13 @@ import { transition } from '../style/modal/transition';
 const StyledBtn = styled(BtnReset)`
   color: ${(props) => props.theme.WHITE};
   ${font({
-    'font-size': { mob: '24px' },
+    'font-size': { mob: '21px', xs: '24px' },
     'line-height': '36px',
     'font-weight': 'bold',
     'letter-spacing': '0.25px',
   })};
   border-radius: ${rem('16px')};
-  ${mq('padding', { mob: '10px 5px', xs: '12px 40px' })};
+  ${mq('padding', { mob: '10px 30px', xs: '12px 40px' })};
   text-shadow: 0 2px 4px rgba(38, 50, 56, 0.16),
     0 4px 8px rgba(38, 50, 56, 0.08);
   box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1),

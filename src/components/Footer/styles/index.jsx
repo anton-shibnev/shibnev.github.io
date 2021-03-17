@@ -6,7 +6,7 @@ import { FooterSocLink } from './FooterSocLink';
 import { Container } from '../../Container';
 
 const StyledFooter = styled(Outer)`
-  ${paddingY('50px')};
+  ${paddingY({ mob: '20px', xs: '50px' })};
   position: relative;
   z-index: ${({ theme }) => theme.Z_INDEX.normal};
 

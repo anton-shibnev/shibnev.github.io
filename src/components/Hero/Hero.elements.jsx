@@ -2,16 +2,20 @@ import styled from 'styled-components';
 import {
   rem,
   paddingY,
+  textAlign,
   maxWidth,
   gridTemplateAreas,
   wh,
+  justifySelf,
   justifyContent,
+  justifyItems,
+  gridGap,
 } from '../../style/modal/';
 import { Outer, Btn, Container, Avatar } from '../';
 import { Desc, Title } from '../../style/helpers/typography';
 
 export const StyledHero = styled(Outer)`
-  ${paddingY({ mob: '70px' })};
+  ${paddingY({ xs: '70px' })};
   display: grid;
   align-items: center;
   height: 100%;
@@ -21,11 +25,13 @@ export const StyledHero = styled(Outer)`
     align-items: center;
     display: grid;
     ${justifyContent({ mob: 'center', xs: 'space-between;' })};
+    ${justifyItems({ mob: 'center', xs: 'space-between;' })};
     ${gridTemplateAreas({
       mob: `'title' 'desc' 'avatar' 'btn'`,
       xs: `'title avatar' 'desc avatar' 'btn avatar'`,
     })};
-    grid-gap: ${rem('20px 50px')};
+    ${gridGap('20px 50px')};
+    ${textAlign({ mob: 'center', xs: 'left' })};
   }
 `;
 
@@ -45,7 +51,7 @@ export const HeroDesc = styled(Desc)`
 
 export const HeroBtn = styled(Btn)`
   grid-area: btn;
-  justify-self: start;
+  ${justifySelf({ mob: 'center', xs: 'start' })};
   position: relative;
   z-index: ${({ theme }) => theme.Z_INDEX.normal};
 `;
