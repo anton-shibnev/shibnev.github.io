@@ -5,7 +5,7 @@ import { HhIcon } from './components/icons';
 export const MAIN_DATA = {
   header: {
     list: [
-      { to: '/', label: 'home' },
+      { to: '/', label: 'about' },
       { to: '/works', label: 'works' },
       // { to: '/contacts', label: 'contacts' },
       // { to: '/about', label: 'about me' },
@@ -36,8 +36,9 @@ export const MAIN_DATA = {
 
 export const HOME_DATA = {
   hero: {
-    title: 'Hi, I am Anton Shibnev, Junior Frontend Devoloper',
-    desc: 'bla bla',
+    title: 'Hi, I am Anton Shibnev, ',
+    prof: 'Junior Frontend Devoloper',
+    desc: 'my stack: HTML, CSS, JS, React, Styled-Components',
     btn: {
       label: 'Download Resume',
       href:
@@ -48,3 +49,13 @@ export const HOME_DATA = {
     },
   },
 };
+
+export const WORKS_DATA = {
+  title: 'see my works',
+  list: [
+    {
+      title: 'pairs game',
+      href: 'https://shibnev.github.io/pairs/index.html'
+    }
+  ]
+}

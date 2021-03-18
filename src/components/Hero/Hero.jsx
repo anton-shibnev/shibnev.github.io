@@ -1,11 +1,11 @@
 import React from 'react';
 import { HOME_DATA } from '../../data';
 import {
-  HeroBtn,
   HeroDesc,
   HeroTitle,
   StyledHero,
   HeroAvatar,
+  HeroProf,
 } from './Hero.elements';
 
 const DATA = HOME_DATA.hero;
@@ -13,11 +13,14 @@ const DATA = HOME_DATA.hero;
 export const Hero = () => {
   return (
     <StyledHero id='hero'>
-      <HeroTitle>{DATA.title}</HeroTitle>
+      <HeroTitle>
+        {DATA.title}
+        <HeroProf>{DATA.prof}</HeroProf>
+      </HeroTitle>
       <HeroDesc>{DATA.desc}</HeroDesc>
-      <HeroBtn href={DATA.btn.href} forwardedAs='a'>
+      {/* <HeroBtn href={DATA.btn.href} forwardedAs='a'>
         {DATA.btn.label}
-      </HeroBtn>
+      </HeroBtn> */}
       <HeroAvatar
         path={DATA.avatar.path}
         fileName={DATA.avatar.fileName}

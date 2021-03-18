@@ -3,6 +3,7 @@ import styled from 'styled-components/macro';
 
 const StyledList = styled.ul`
   padding: 0;
+  margin: 0;
   list-style: ${(props) => props.listStyle || 'none'};
   align-items: center;
   display: grid;
@@ -15,6 +16,8 @@ export const List = ({
   autoFlow,
   listStyle,
   className,
+  onMouseEnter,
+  onMouseLeave,
 }) => {
   const listItems = list.map((item, index) => <li key={index}>{item}</li>);
 
@@ -24,6 +27,8 @@ export const List = ({
       as={as}
       listStyle={listStyle}
       autoFlow={autoFlow}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {listItems}
     </StyledList>

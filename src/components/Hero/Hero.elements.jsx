@@ -10,6 +10,7 @@ import {
   justifyContent,
   justifyItems,
   gridGap,
+  font,
 } from '../../style/modal/';
 import { Outer, Btn, Container, Avatar } from '../';
 import { Desc, Title } from '../../style/helpers/typography';
@@ -37,7 +38,7 @@ export const StyledHero = styled(Outer)`
 
 export const HeroTitle = styled(Title)`
   ${maxWidth('800px')}
-
+  text-shadow: 0 ${rem('4px')} 0 ${({ theme }) => theme.WHITE};
   position: relative;
   z-index: ${({ theme }) => theme.Z_INDEX.normal};
   grid-area: title;
@@ -71,4 +72,13 @@ export const HeroAvatar = styled(Avatar)`
     border-radius: ${rem('99px')};
     opacity: 0.4;
   }
+`;
+
+export const HeroProf = styled.span`
+  ${font({
+    'font-size': { mob: '48px' },
+    'line-hight': { mob: '56px' },
+    'font-weight': '900',
+    'letter-spacing': ' -1px',
+  })};
 `;

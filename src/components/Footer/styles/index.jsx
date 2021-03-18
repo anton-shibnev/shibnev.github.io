@@ -1,8 +1,6 @@
 import styled from 'styled-components/macro';
 import { paddingY } from '../../../style/modal/';
 import { Outer } from '../../';
-import { FooterList } from './FooterList';
-import { FooterSocLink } from './FooterSocLink';
 import { Container } from '../../Container';
 
 const StyledFooter = styled(Outer)`
@@ -25,4 +23,7 @@ const FooterInner = styled.div`
   align-items: center;
 `;
 
-export { FooterInner, FooterList, StyledFooter, FooterSocLink };
+export { FooterInner, StyledFooter };
+export { FooterList } from './FooterList';
+export { FooterSocLink } from './FooterSocLink';
+export { FooterListAnchor } from './FooterListAnchor';

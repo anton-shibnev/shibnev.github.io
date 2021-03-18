@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import { MAIN_DATA } from '../../data';
-import { StyledFooter, FooterSocLink, FooterList, FooterInner } from './styles';
-import { FooterListAnchor } from './styles/FooterList';
+import {
+  FooterListAnchor,
+  StyledFooter,
+  FooterSocLink,
+  FooterList,
+  FooterInner,
+} from './styles';
 
 const DATA = MAIN_DATA.footer;
 
 export const Footer = () => {
   const [anchorLeft, setAnchorLeft] = useState(0);
+  const [anchorScale, setAnchorScale] = useState(0);
 
   const moveAnchor = (e) => setAnchorLeft(e.target.offsetLeft);
 
@@ -27,8 +33,13 @@ export const Footer = () => {
   return (
     <StyledFooter forwardedAs='footer' id='footer'>
       <FooterInner>
-        <FooterList gap='30' list={list} />
-        <FooterListAnchor anchorLeft={anchorLeft} />
+        <FooterList
+          gap='30'
+          list={list}
+          onMouseEnter={() => setAnchorScale(1)}
+          onMouseLeave={() => setAnchorScale(0)}
+        />
+        <FooterListAnchor anchorScale={anchorScale} anchorLeft={anchorLeft} />
       </FooterInner>
     </StyledFooter>
   );

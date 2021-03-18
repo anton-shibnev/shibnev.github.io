@@ -1,5 +1,10 @@
 import styled from 'styled-components/macro';
-import { font, hoverFocus } from '../../../style/modal/';
+import {
+  absCenter,
+  font,
+  hoverFocus,
+  wh,
+} from '../../../style/modal/';
 
 export const FooterSocLink = styled.a`
   color: ${({ theme }) => theme.PRIMARY};
@@ -7,6 +12,12 @@ export const FooterSocLink = styled.a`
   position: relative;
   z-index: ${({ theme }) => theme.Z_INDEX.normal};
   display: flex;
+
+  &::after {
+    content: '';
+    ${absCenter()};
+    ${wh('220%')};
+  }
 
   svg {
     pointer-events: none;
