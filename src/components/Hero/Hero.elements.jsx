@@ -25,7 +25,7 @@ export const StyledHero = styled(Outer)`
     align-items: center;
     display: grid;
     ${justifyContent({ mob: 'center', xs: 'space-between;' })};
-    ${justifyItems({ mob: 'center', xs: 'space-between;' })};
+    ${justifyItems({ mob: 'center', xs: 'normal' })};
     ${gridTemplateAreas({
       mob: `'title' 'desc' 'avatar' 'btn'`,
       xs: `'title avatar' 'desc avatar' 'btn avatar'`,
