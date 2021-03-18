@@ -1,5 +1,5 @@
 import React from 'react';
-import { HOME_DATA } from '../../pages/Home/data';
+import { HOME_DATA } from '../../data';
 import {
   HeroBtn,
   HeroDesc,
