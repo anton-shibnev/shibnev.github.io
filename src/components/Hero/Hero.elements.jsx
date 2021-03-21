@@ -69,3 +69,11 @@ export const HeroProf = styled.span`
     'letter-spacing': ' -1px',
   })};
 `;
+export const HeroPreTitle = styled.span`
+  ${font({
+    'font-size': { mob: '28px' },
+    'line-hight': { mob: '1' },
+    'font-weight': '900',
+    'letter-spacing': ' -1px',
+  })};
+`;

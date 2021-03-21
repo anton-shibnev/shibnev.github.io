@@ -39,7 +39,8 @@ export const MAIN_DATA = {
 
 export const HOME_DATA = {
   hero: {
-    title: 'Hi, I am Anton Shibnev, ',
+    preTitle: 'Hi, I am ',
+    title: 'Anton Shibnev, ',
     prof: 'Junior Frontend Developer',
     desc: 'my stack: HTML, (S)CSS, JS, React, Styled-Components',
     btn: {

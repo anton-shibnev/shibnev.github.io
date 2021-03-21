@@ -7,6 +7,7 @@ import {
   HeroAvatar,
   HeroProf,
   HeroBtn,
+  HeroPreTitle,
 } from './Hero.elements';
 
 const DATA = HOME_DATA.hero;
@@ -15,7 +16,10 @@ export const Hero = () => {
   return (
     <StyledHero id='hero'>
       <HeroTitle>
+        <HeroPreTitle>{DATA.preTitle}</HeroPreTitle>
+        <br />
         {DATA.title}
+        <br />
         <HeroProf>{DATA.prof}</HeroProf>
       </HeroTitle>
       <HeroDesc>{DATA.desc}</HeroDesc>
