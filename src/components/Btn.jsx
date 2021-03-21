@@ -2,12 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { BtnReset } from '../style/helpers';
 import { font } from '../style/modal/font';
-import { mq } from '../style/modal/mq';
 import { rem } from '../style/modal/rem';
 import { hoverFocus } from '../style/modal/hoverFocus';
 import { transition } from '../style/modal/transition';
+import { padding } from '../style/modal/padding';
 
 const StyledBtn = styled(BtnReset)`
+  position: relative;
   color: ${(props) => props.theme.WHITE};
   ${font({
     'font-size': { mob: '21px', xs: '24px' },
@@ -15,26 +16,28 @@ const StyledBtn = styled(BtnReset)`
     'font-weight': 'bold',
     'letter-spacing': '0.25px',
   })};
-  border-radius: ${rem('16px')};
-  ${mq('padding', { mob: '10px 30px', xs: '12px 40px' })};
-  text-shadow: 0 2px 4px rgba(38, 50, 56, 0.16),
-    0 4px 8px rgba(38, 50, 56, 0.08);
-  box-shadow: 0px 8px 24px rgba(38, 50, 56, 0.1),
-    0px 16px 32px rgba(38, 50, 56, 0.08);
-  ${transition('background-color', 'color', 'box-shadow')};
-  background-color: ${(props) => props.theme.PRIMARY};
   display: inline-flex;
   text-decoration: none;
+  background-color: ${(props) => props.theme.SECONDARY};
+  border-radius: ${rem('16px')};
+`;
+
+const BtnBody = styled.span`
+  border-radius: ${rem('16px')};
+  ${padding({ mob: '10px 30px', xs: '12px 40px' })};
+  ${transition('transform')};
+  background-color: ${(props) => props.theme.PRIMARY};
+  transform: translate(-4px, -4px);
 
   ${hoverFocus`
-    background-color: ${(props) => props.theme.DARK};
+      transform: translate(0, 0);
   `};
 `;
 
-export const Btn = ({ children, as = 'button', className, href }) => {
+export const Btn = ({ target, children, as = 'button', className, href }) => {
   return (
-    <StyledBtn as={as} className={className} href={href}>
-      {children}
+    <StyledBtn target={target} as={as} className={className} href={href}>
+      <BtnBody>{children}</BtnBody>
     </StyledBtn>
   );
 };

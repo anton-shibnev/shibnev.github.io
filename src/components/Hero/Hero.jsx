@@ -6,6 +6,7 @@ import {
   StyledHero,
   HeroAvatar,
   HeroProf,
+  HeroBtn,
 } from './Hero.elements';
 
 const DATA = HOME_DATA.hero;
@@ -18,9 +19,13 @@ export const Hero = () => {
         <HeroProf>{DATA.prof}</HeroProf>
       </HeroTitle>
       <HeroDesc>{DATA.desc}</HeroDesc>
-      {/* <HeroBtn href={DATA.btn.href} forwardedAs='a'>
+      <HeroBtn
+        target='__blank'
+        href={`mailto:${DATA.btn.href}`}
+        forwardedAs='a'
+      >
         {DATA.btn.label}
-      </HeroBtn> */}
+      </HeroBtn>
       <HeroAvatar
         path={DATA.avatar.path}
         fileName={DATA.avatar.fileName}

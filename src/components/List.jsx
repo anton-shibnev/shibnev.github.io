@@ -19,8 +19,6 @@ export const List = ({
   onMouseEnter,
   onMouseLeave,
 }) => {
-  const listItems = list.map((item, index) => <li key={index}>{item}</li>);
-
   return (
     <StyledList
       className={className}
@@ -30,7 +28,9 @@ export const List = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
     >
-      {listItems}
+      {list.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
     </StyledList>
   );
 };

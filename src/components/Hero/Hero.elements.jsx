@@ -5,7 +5,6 @@ import {
   textAlign,
   maxWidth,
   gridTemplateAreas,
-  wh,
   justifySelf,
   justifyContent,
   justifyItems,
@@ -60,18 +59,6 @@ export const HeroBtn = styled(Btn)`
 export const HeroAvatar = styled(Avatar)`
   grid-area: avatar;
   position: relative;
-
-  &:after {
-    content: '';
-    ${wh('100vh')};
-    position: absolute;
-    top: ${rem('-60vh')};
-    right: ${rem('-500px')};
-    background-color: ${({ theme }) => theme.LIGHT};
-    transform: rotate(45deg);
-    border-radius: ${rem('99px')};
-    opacity: 0.4;
-  }
 `;
 
 export const HeroProf = styled.span`

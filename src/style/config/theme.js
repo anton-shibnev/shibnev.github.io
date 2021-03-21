@@ -30,7 +30,7 @@ export const BREAKPOINTS = {
 };
 
 // container
-export const CONTAINER_MAX_WIDTH = `1170px`;
+export const CONTAINER_MAX_WIDTH = `1000px`;
 
 export const CONTAINER_PADDINGS = {
   mob: '10px',

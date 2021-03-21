@@ -12,8 +12,15 @@ const StyledWorksList = styled.div`
 `;
 
 export const WorksList = ({ list = [] }) => {
-  const mapList = list.map((el, index) => (
-    <WorkCard key={index} title={el.title} href={el.href} />
+  const mapList = list.map((card, index) => (
+    <WorkCard
+      key={index}
+      title={card.title}
+      desc={card.desc}
+      webHref={card.webHref}
+      gitHref={card.gitHref}
+      stack={card.stack}
+    />
   ));
 
   return <StyledWorksList>{mapList}</StyledWorksList>;

@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { circle } from '../style/modal';
+import { circle, rem } from '../style/modal';
 import { Picture } from './';
 
 const StyledAvatar = styled(Picture)`
   img {
-    ${circle('250px')};
+    ${(props) => (props.isCircle ? circle('250px') : '')};
+    box-shadow: ${rem('-3px 3px 0 3px')} ${({ theme }) => theme.LIGHT};
   }
 `;
 
@@ -16,6 +17,7 @@ export const Avatar = ({
   fileType = 'jpg',
   alt = '',
   className,
+  isCircle = true,
 }) => {
   return (
     <StyledAvatar
@@ -25,6 +27,7 @@ export const Avatar = ({
       fileType={fileType}
       alt={alt}
       className={className}
+      isCircle={isCircle}
     />
   );
 };

@@ -5,7 +5,8 @@ import {
   StyledFooter,
   FooterSocLink,
   FooterList,
-  FooterInner,
+  FooterMadeBy,
+  FooterWrap,
 } from './styles';
 
 const DATA = MAIN_DATA.footer;
@@ -32,7 +33,7 @@ export const Footer = () => {
 
   return (
     <StyledFooter forwardedAs='footer' id='footer'>
-      <FooterInner>
+      <FooterWrap>
         <FooterList
           gap='30'
           list={list}
@@ -40,7 +41,8 @@ export const Footer = () => {
           onMouseLeave={() => setAnchorScale(0)}
         />
         <FooterListAnchor anchorScale={anchorScale} anchorLeft={anchorLeft} />
-      </FooterInner>
+      </FooterWrap>
+      <FooterMadeBy>{DATA.madeBy}</FooterMadeBy>
     </StyledFooter>
   );
 };

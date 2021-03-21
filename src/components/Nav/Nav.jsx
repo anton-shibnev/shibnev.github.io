@@ -1,10 +1,4 @@
-import styled from 'styled-components';
-import { NavItem } from './NavItem';
-import { NavList } from './NavList';
-
-const SNav = styled.nav`
-  position: relative;
-`;
+import { SNav, NavItem, NavList } from './Nav.elements';
 
 export const Nav = ({ className, onClick, autoFlow, list }) => {
   const mapList = list.map((item) => (
