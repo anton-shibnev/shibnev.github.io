@@ -18,6 +18,7 @@ const Main = styled.main`
     transform: rotate(45deg);
     border-radius: ${rem('99px')};
     opacity: 0.2;
+    pointer-events: none;
   }
 `;
 
