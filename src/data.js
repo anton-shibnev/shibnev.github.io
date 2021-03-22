@@ -58,10 +58,18 @@ export const WORKS_DATA = {
   list: [
     {
       title: 'memory game',
-      desc: 'Just learned how to work with localStorage',
+      desc:
+        'Simple game of finding pairs. Here I learned how to use the localeStorage. I am planing to rewrite to react',
       gitHref: 'https://github.com/shibnev/pairs',
       webHref: 'https://shibnev.github.io/pairs/index.html',
-      stack: ['JS', 'CSS', 'HTML'],
+      stack: ['JS', 'CSS', 'HTML', 'locale Storage'],
+    },
+    {
+      title: 'fab store',
+      desc: 'Shoe store. I am planing to rewrite to react',
+      gitHref: 'https://github.com/shibnev/shoes-store',
+      webHref: 'https://shibnev.github.io/shoes-store/dist/index.html',
+      stack: ['JS', 'SCSS', 'HTML', 'PUG', 'BEM'],
     },
   ],
 };
