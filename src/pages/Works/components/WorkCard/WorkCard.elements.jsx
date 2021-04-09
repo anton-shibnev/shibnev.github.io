@@ -3,7 +3,7 @@ import { List } from '../../../../components';
 import { LinkReset } from '../../../../style/helpers';
 import {
   font,
-  gridGap,
+  flexGap,
   hoverFocus,
   padding,
   marginTop,
@@ -80,9 +80,7 @@ export const WorkCardLinks = styled.div`
 `;
 
 export const WorkCardStack = styled(List)`
-  ${gridGap('10px')};
-  grid-auto-flow: column;
-  justify-content: start;
+  ${flexGap('10px')};
   ${font({ 'font-size': '12px' })};
   text-transform: uppercase;
   margin-top: auto;

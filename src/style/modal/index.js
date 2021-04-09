@@ -18,6 +18,7 @@ export { rgba } from './rgba';
 export { transition } from './transition';
 export { wh, maxWidth } from './wh';
 export { absCenter } from './absCenter';
+export { flexGap } from './flexGap';
 
 // common
 export const display = (thing) => mq('display', thing);
