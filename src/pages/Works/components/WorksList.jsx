@@ -5,7 +5,7 @@ import { WorkCard } from './';
 
 const StyledWorksList = styled.div`
   display: grid;
-  grid-template-rows: ${rem('300px')};
+  grid-auto-rows: ${rem('300px')};
   grid-template-columns: repeat(auto-fill, minmax(${rem('300px')}, 1fr));
   ${gridGap('20px')};
   ${marginTop('40px')};
