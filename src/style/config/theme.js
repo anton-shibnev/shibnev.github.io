@@ -3,7 +3,7 @@ export const BLACK = `#000`;
 export const WHITE = `#FFF`;
 
 // theme colors
-export const DARK = `#2D3436`;
+export const DARK = '#2D3436';
 export const PRIMARY = `#6C5CE7`;
 export const SECONDARY = `#55efc4`;
 export const LIGHT = `#FFEAA7`;

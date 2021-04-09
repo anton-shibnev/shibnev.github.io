@@ -9,8 +9,6 @@ export const MAIN_DATA = {
     list: [
       { to: '/', label: 'home' },
       { to: '/works', label: 'works' },
-      // { to: '/contacts', label: 'contacts' },
-      // { to: '/about', label: 'about me' },
     ],
   },
   footer: {
@@ -65,11 +63,19 @@ export const WORKS_DATA = {
       stack: ['JS', 'CSS', 'HTML', 'locale Storage'],
     },
     {
-      title: 'fab store',
-      desc: 'Shoe store. I am planing to rewrite to react',
-      gitHref: 'https://github.com/shibnev/shoes-store',
-      webHref: 'https://shibnev.github.io/shoes-store/dist/index.html',
-      stack: ['JS', 'SCSS', 'HTML', 'PUG', 'BEM'],
+      title: 'memory game',
+      desc:
+        'Simple game of finding pairs. Here I learned how to use the localeStorage. I am planing to rewrite to react',
+      gitHref: 'https://github.com/shibnev/pairs',
+      webHref: 'https://shibnev.github.io/pairs/index.html',
+      stack: ['JS', 'CSS', 'HTML', 'locale Storage'],
+    },
+    {
+      title: 'Students Table',
+      desc: 'Input form, filter and table with sort, for add new students',
+      gitHref: 'https://github.com/shibnev/students-table',
+      webHref: 'https://shibnev.github.io/students-table/',
+      stack: ['JS', 'Bootstrap', 'HTML', 'locale Storage'],
     },
   ],
 };
