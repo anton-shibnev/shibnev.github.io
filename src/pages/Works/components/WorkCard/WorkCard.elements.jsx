@@ -28,14 +28,17 @@ export const WorkCardInner = styled.div`
   background-color: ${({ theme }) => theme.LIGHT};
   border-radius: ${rem('16px')};
   ${padding('24px')};
-  height: 100%;
-  width: 100%;
+  height: 101%;
+  width: 101%;
   ${transition('transform')};
 `;
 
 export const StyledWorkCard = styled.article`
   background-color: ${({ theme }) => theme.SECONDARY};
   border-radius: ${rem('16px')};
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ${hoverFocus`
     ${WorkCardInner} {
