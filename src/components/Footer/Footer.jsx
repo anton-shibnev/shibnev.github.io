@@ -24,6 +24,7 @@ export const Footer = () => {
       <FooterSocLink
         onMouseEnter={moveAnchor}
         href={item.href}
+        title={item.title}
         target='__blank'
       >
         <Item />

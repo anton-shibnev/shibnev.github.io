@@ -29,7 +29,6 @@ export const GlobalStyle = createGlobalStyle`
     align-content: start;
     grid-template-rows: auto 1fr auto; 
     background-color: ${(props) => props.theme.BG_COLOR};
-    user-select: none;
     overflow-x: hidden;
   }
 

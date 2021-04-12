@@ -1,5 +1,6 @@
 import { SiCodewars } from 'react-icons/si';
-import { FiFacebook, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FaTelegramPlane } from 'react-icons/fa';
 import { HhIcon } from './components/icons';
 
 export const MY_MAIL = 'shibnev.anton@gmail.com';
@@ -14,21 +15,29 @@ export const MAIN_DATA = {
   footer: {
     arr: [
       {
-        href: 'https://www.facebook.com/anton.shibnev.10',
-        icon: FiFacebook,
+        href: 'https://t.me/anton_shibnev',
+        icon: FaTelegramPlane,
+        title: 'Telegram',
       },
-      { href: 'https://www.codewars.com/users/shibnev', icon: SiCodewars },
+      {
+        href: 'https://www.codewars.com/users/shibnev',
+        icon: SiCodewars,
+        title: 'codewars',
+      },
       {
         href: 'https://www.linkedin.com/in/антон-шибнев-634130140',
         icon: FiLinkedin,
+        title: 'LinkedIn',
       },
       {
         href: 'https://spb.hh.ru/resume/063ef629ff034ef45b0039ed1f344433305458',
         icon: HhIcon,
+        title: 'Head Hunter',
       },
       {
         href: 'https://github.com/shibnev',
         icon: FiGithub,
+        title: 'GitHub',
       },
     ],
     madeBy: 'made by Anton Shibnev',
@@ -71,8 +80,7 @@ export const WORKS_DATA = {
     },
     {
       title: 'Students Table',
-      desc:
-        'Input form, filter and table with sort, for add new students',
+      desc: 'Input form, filter and table with sort, for add new students',
       gitHref: 'https://github.com/shibnev/pairs',
       webHref: 'https://shibnev.github.io/pairs/index.html',
       stack: ['JS', 'Bootstrap', 'js class', 'locale Storage'],
