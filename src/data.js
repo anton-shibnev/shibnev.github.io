@@ -80,8 +80,8 @@ export const WORKS_DATA = {
     {
       title: 'Students Table',
       desc: 'Input form, filter and table with sort, for add new students',
-      gitHref: 'https://github.com/shibnev/students-table/index.html',
-      webHref: 'https://github.com/shibnev/students-table',
+      gitHref: 'https://github.com/shibnev/students-table',
+      webHref: 'https://shibnev.github.io/students-table/index.html',
       stack: ['JS', 'Bootstrap', 'js class', 'local Storage'],
     },
   ],
