@@ -65,11 +65,10 @@ export const WORKS_DATA = {
   list: [
     {
       title: 'memory game',
-      desc:
-        'Simple game of finding pairs. Here I learned how to use the localeStorage. I am planing to rewrite to react',
+      desc: 'Simple game of finding pairs. Here I learned how to use the localStorage. I am planing to rewrite to react',
       gitHref: 'https://github.com/shibnev/pairs',
       webHref: 'https://shibnev.github.io/pairs/index.html',
-      stack: ['JS', 'CSS', 'HTML', 'locale Storage'],
+      stack: ['JS', 'CSS', 'HTML', 'local Storage'],
     },
     {
       title: 'fab store',
@@ -81,9 +80,9 @@ export const WORKS_DATA = {
     {
       title: 'Students Table',
       desc: 'Input form, filter and table with sort, for add new students',
-      gitHref: 'https://github.com/shibnev/pairs',
-      webHref: 'https://shibnev.github.io/pairs/index.html',
-      stack: ['JS', 'Bootstrap', 'js class', 'locale Storage'],
+      gitHref: 'https://github.com/shibnev/students-table/index.html',
+      webHref: 'https://github.com/shibnev/students-table',
+      stack: ['JS', 'Bootstrap', 'js class', 'local Storage'],
     },
   ],
 };

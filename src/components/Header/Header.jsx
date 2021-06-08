@@ -15,9 +15,14 @@ export const Header = () => {
 
   return (
     <StyledHeader forwardedAs='header' id='header'>
-      <HeaderNav list={DATA.list} autoFlow='column'/>
-      <HeaderBurger onClick={handleClick} click={click}  />
-      <HeaderMobNav list={DATA.list} onClick={handleClick} click={click} autoFlow='row' />
+      <HeaderNav list={DATA.list} autoFlow='column' />
+      <HeaderBurger onClick={handleClick} click={click} />
+      <HeaderMobNav
+        list={DATA.list}
+        onClick={handleClick}
+        click={click}
+        autoFlow='row'
+      />
     </StyledHeader>
   );
 };
